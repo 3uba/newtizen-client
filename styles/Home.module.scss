@@ -1,0 +1,119 @@
+@import 'variables';
+
+@mixin circle($height, $right, $top, $color) {
+  position: absolute;
+  z-index: -1;
+  border-radius: 100%;
+  background: $color;
+  width: $height;
+  height: $height;
+  right: $right;
+  top: $top;
+}
+
+.home{
+  height: auto;
+  width: 100%;
+  position: relative;
+  &__circle {
+    &_one {
+      @include circle(40vh, -3vh, -3vw, $color1);
+    }
+    &_two{
+      @include circle(34vh, 16vh, 14vw, $color2);
+    }
+    &_three {
+      @include circle(30vh, 7vh, 28vw, $color5);
+    }
+  }
+  &__welcome {
+    min-height: 18vh;
+    height: auto;
+    padding: 2rem 15%;
+    display: flex;
+    align-items: center;
+    &__span {
+      font-size: 3rem;
+    }
+  }
+  &__searcher {
+    font-size: 1.2rem;
+    height: auto;
+    padding: 0 15%;
+    display: flex;
+    flex-direction: column;
+    &__container {
+      display: flex;
+      flex-direction: column;
+      height: auto;
+    }
+    &__prgf {
+      padding: 1.8rem 0 1.6rem 0;
+      font-size: 1.8rem;
+      line-height: 2.2rem;
+    }
+    &__box {
+      width: 100%;
+      display: flex;
+      align-items: center;
+    }
+    &__quest {
+      padding: 0 0 1.2rem 0;
+      color: #444444;
+    }
+    &__label{
+      padding: 0 3rem 0 0;
+      select {
+        min-width: 10rem;
+      }
+    }
+    &__btn {
+      margin: 3rem 0 1rem;
+      padding: .6rem;
+      width: 12rem;
+      text-align: center;
+    }
+  }
+
+  &__desc {
+    height: auto;
+    padding: 2rem 15% 0;
+    line-height: 2rem;
+    font-size: 1.2rem;
+    h1 {
+      font-size: 1.8rem;
+      font-weight: normal;
+    }
+    p {
+      padding: 2rem 0;
+      font-size: 1.2rem;
+      color: #444444;
+    }
+    ol {
+      li {
+        margin-left: 20px;
+      }
+    }
+  }
+
+  @media screen and (max-width: 820px) {
+    &__welcome {
+      &__span {
+        font-size: 2rem;
+      }
+    }
+    &__searcher {
+      flex-direction: column;
+      padding: 0;
+      &__container, &__article {
+        flex-direction: column;
+        width: 100%;
+        padding: 1rem 5%;
+      }
+        &__btn {
+        margin-top: 3rem;
+      }
+    }
+  }
+}
+

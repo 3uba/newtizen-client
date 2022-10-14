@@ -1,0 +1,38 @@
+@import "variables";
+
+.searcher {
+  width: 100%;
+  min-height: 100%;
+  font-size: 1.2rem;
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    &__label {
+      margin: 0 0 .6rem;
+    }
+    &__location {
+      display: flex;
+      justify-content: space-between;
+    }
+    &__box {
+      &__row {
+        flex-direction: row;
+        justify-content: space-between;
+      }
+      &__column {
+        display: flex;
+        margin: 0 0 2rem;
+        flex-direction: row;
+        justify-content: space-between;
+      }
+    }
+    &__category {
+      margin: 1rem 0;
+    }
+    &__p {
+      padding: 0 0 1rem 0;
+      font-size: 1.3rem;
+    }
+  }
+}

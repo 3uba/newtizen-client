@@ -1,9 +1,7 @@
 import axios from "axios";
 import {contentURL} from "../../config/axios";
 
-export default function Page({postContent: {data}}) {
-    console.log(data)
-
+export default function Home({postContent: {data}}) {
     return (
         <h1 className="text-3xl font-bold ">
             {data.map(({attributes: {title, content}}) => (

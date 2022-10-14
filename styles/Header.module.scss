@@ -1,0 +1,14 @@
+@import 'variables';
+
+.header {
+  width: 100%;
+  height: auto;
+  background: $color5;
+  padding: 1.4rem 15%;
+  z-index: 10;
+  &__label {
+    font-size: 1.6rem;
+    color: #fff;
+    cursor: pointer;
+  }
+}
