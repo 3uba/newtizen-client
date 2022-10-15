@@ -2,8 +2,8 @@ import {createRef, useState} from "react";
 import {useRouter} from "next/router";
 import Link from "next/link";
 import axios from "axios";
-
-import style from "../styles/Home.module.scss";
+import {AiOutlineCheck} from "react-icons/ai"
+import style from "../styles/Leading.module.scss";
 import {contentURL} from "../config/axios";
 
 export default function Home({home}) {
@@ -16,18 +16,22 @@ export default function Home({home}) {
     const [secondCountry, setSecondCountry] = useState('');
     const [personCountry, setPersonCountry] = useState('');
 
-    const Search = (e, btn) => {
+    function Search (e, btn) {
         e.preventDefault()
         console.log('hello')
 
         if (btn === 1) {
             if (firstCountry !== '' && secondCountry !== '') {
-                router.push({
-                    pathname: `/articles`,
-                    query: {
+                let query = (firstCountry === secondCountry) ?
+                    {
+                        local: firstCountry
+                    } : {
                         from: firstCountry,
                         to: secondCountry
                     }
+                router.push({
+                    pathname: `/articles`,
+                    query: query
                 }).then(r => (console.log(r)))
             } else {
                 input1.current.style.color = "red"
@@ -55,6 +59,11 @@ export default function Home({home}) {
                   Sprawdzaj wszystkie prawa, w jednym miejscu <br />
                   Nieważne skąd jesteś, i gdzie jesteś
               </span>
+              <div className={style.home__welcome__table}>
+                  <span><AiOutlineCheck /> Czytaj artykóły ludzi na temat prawa</span>
+                  <span><AiOutlineCheck /> Zadawaj pytania i komentuj</span>
+                  <span><AiOutlineCheck /> Dziel sie wiedzą i własnymi doświadczeniami </span>
+              </div>
           </div>
           <div className={style.home__searcher}>
               <div className={style.home__searcher__container}>
@@ -117,8 +126,12 @@ export default function Home({home}) {
               <h1>Czym jest newtizen?</h1>
 
               <p>
-                  Newtizen, blog dla wszystkich obywateli, którzy chcą
-                  być rzetelnie doinformowani na temat praw jakie nami rządzą.
+                  Newtizen, portal dla wszystkich obywateli, którzy chcą
+                  być rzetelnie doinformowani na temat praw jakie nami rządzą.<br />
+                  Newtizen ma za zadanie w prosty sposób wskazać prawa w kraju,
+                  jak również różnice praw w różnych krajach tak abyśmy <br/>
+                  mieli pojęcie co możemy, czego nie możemy robić i co
+                  robić/jak sobie radzić jak już się stało.
               </p>
 
               <h1>Geneza powstania</h1>
@@ -133,18 +146,18 @@ export default function Home({home}) {
 
                   Artykuły w internecie możemy podzielić na 2 rodzaje:
               </p>
-                  <ol>
-                      <li>Tworzone przez prase, wyreżyserowane, przepełnione wiedzą
-                          bez rozwiazania</li>
-                      <li>Które tworzą ludzie, przepełnione bezwartościowymi informacjami,
-                        często również nieprawdziwymi
-                      </li>
-                  </ol>
+
+              <ol>
+                  <li>Tworzone przez prase, wyreżyserowane, przepełnione wiedzą
+                      bez rozwiazania</li>
+                  <li>Które tworzą ludzie, przepełnione bezwartościowymi informacjami,
+                    często również nieprawdziwymi
+                  </li>
+              </ol>
 
               <p>
-                  Na szczeście, my rozwiązujemy ten problem, bo tworzą ten blog
+                  Na szczeście, my rozwiązujemy ten problem, bo tworzą ten serwis
                   ludzie, <b>ale</b> wszystkie treści są weryfikowane przed opublikowaniem. <br/>
-                  Dodatkowo
               </p>
 
               <h1>Dlaczego artykóły tworzą ludzie?</h1>
@@ -174,7 +187,8 @@ export default function Home({home}) {
 
               <p>
                   <b><u>Newtizen to zbiór zasad, praw i prawdziwych historii <br />
-                      Stworzony poto abyś był poinformowany o wszystkim</u></b>
+                      Stworzony poto abyś był poinformowany o wszystkim, zawsze i wszędzie</u></b>
+
               </p>
           </div>
       </div>

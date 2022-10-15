@@ -1,21 +1,32 @@
-@import "variables";
+@import "styles/variables";
 
 .searcher {
   width: 100%;
   min-height: 100%;
   font-size: 1.2rem;
+  padding: 1rem 0;
+  border-bottom: 1px solid black;
 
   &__content {
     display: flex;
     flex-direction: column;
     &__label {
-      margin: 0 0 .6rem;
+      margin: 0 1rem.6rem 0 ;
     }
     &__location {
       display: flex;
       justify-content: space-between;
     }
+    &__radios {
+      display: flex;
+
+    }
     &__box {
+      display: flex;
+      padding: 1rem 0;
+      > div {
+        margin: 0 2rem 0 0;
+      }
       &__row {
         flex-direction: row;
         justify-content: space-between;
@@ -24,6 +35,7 @@
         display: flex;
         margin: 0 0 2rem;
         flex-direction: row;
+        width: 80%;
         justify-content: space-between;
       }
     }
@@ -34,5 +46,6 @@
       padding: 0 0 1rem 0;
       font-size: 1.3rem;
     }
+
   }
 }

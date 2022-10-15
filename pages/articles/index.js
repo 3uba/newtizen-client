@@ -3,7 +3,7 @@ import axios from "axios"
 import Link from "next/link";
 import Searcher from "../../components/Searcher";
 import Article from "../../components/Article";
-import style from "../../styles/Articles.module.scss";
+import style from "../../styles/Home.module.scss";
 
 export default function Home({blogPosts}) {
     return (

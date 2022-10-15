@@ -1,4 +1,4 @@
-import style from "../styles/Article.module.scss"
+import style from "../styles/components/Post.module.scss"
 import Link from "next/link";
 
 import {AiFillStar} from 'react-icons/ai'
@@ -14,7 +14,7 @@ export default function Article({attributes : {title, content, slug, category, v
             <div className={style.article__border}>
                 <div className={style.article__category}>
                     <span className={style.article__category__text}>{category}</span>
-                    {(verified) ? (<AiFillStar color={"gold"} />) : ""}
+                    {(verified) ? (<AiFillStar />) : ""}
                 </div>
                 <div className={style.article__content}>
                     <h1 className={style.article__title}>{title}</h1>
