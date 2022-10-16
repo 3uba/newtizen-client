@@ -18,7 +18,6 @@ export default function Home({home}) {
 
     function Search (e, btn) {
         e.preventDefault()
-        console.log('hello')
 
         if (btn === 1) {
             if (firstCountry !== '' && secondCountry !== '') {

@@ -1,7 +1,7 @@
 import style from "../styles/components/Post.module.scss"
 import Link from "next/link";
 
-import {AiFillStar} from 'react-icons/ai'
+import {MdVerified} from 'react-icons/md'
 
 export default function Post({attributes : {title, content, slug, category, verified, createdAt}}) {
     let finalContent = content.substring(0, 200)
@@ -12,7 +12,9 @@ export default function Post({attributes : {title, content, slug, category, veri
             <div className={style.article__border}>
                 <div className={style.article__category}>
                     <span className={style.article__category__text}>{category}</span>
-                    {(verified) ? (<AiFillStar />) : ""}
+                    {(verified) ? (
+                            <MdVerified style={{ color: "white" }} color="white" />
+                        ) : ""}
                 </div>
                 <div className={style.article__content}>
                     <h1 className={style.article__title}>{title}</h1>

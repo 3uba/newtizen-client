@@ -3,15 +3,14 @@ import {createRef, useEffect, useState} from "react";
 import axios from "axios";
 import {contentURL} from "../config/axios";
 
-export default function Searcher() {
+export default function Searcher({setFirstCountry, setMotherCountry, setSecondCountry, search,
+            traffic, setTraffic, laws, setLaws, penality, setPenality, taxes, setTaxes, setVerified, verified
+    }) {
     const [location, setLocation] = useState(0)
     const [countries, setCountries] = useState()
     const input1 = createRef()
     const input2 = createRef()
     const input3 = createRef()
-    const [firstCountry, setFirstCountry] = useState('')
-    const [secondCountry, setSecondCountry] = useState('')
-    const [motherCountry, setMotherCountry] = useState('')
     const [visible, setVisible] = useState(false)
 
     useEffect( () => {
@@ -25,7 +24,6 @@ export default function Searcher() {
     return (
         <div className={style.searcher}>
             <p className={style.searcher__title}>Filtry</p>
-            {(visible) ? (
             <div className={style.searcher__content}>
                 <div className={style.searcher__content__box__row}>
                     <div className={style.searcher__content__radios}>
@@ -79,49 +77,54 @@ export default function Searcher() {
                         </div>
                     ): ""}
                 </div>
-
-                <div>
-                    <p className={style.searcher__content__p}>Wybierz interesujące cie katerogie</p>
-                    <div className={style.searcher__content__box__column}>
-                        <span>
-                            <input type={"checkbox"} value={""} />
-                            <label>
-                                &nbsp;Ruch drogowy
-                            </label>
-                        </span>
-                        <span>
-                            <input type={"checkbox"} value={""} />
-                            <label>
-                                &nbsp;Prawa
-                            </label>
-                        </span>
-                        <span>
-                            <input type={"checkbox"} value={""} />
-                            <label>
-                                &nbsp;Podatki
-                            </label>
-                        </span>
-                        <span>
-                            <input type={"checkbox"} value={""} />
-                            <label>
-                                &nbsp;Karalność
-                            </label>
-                        </span>
-                    </div>
-                </div>
-                <div>
-                    <span>
-                        <input type={"checkbox"} value={""} />
-                        <label>
-                            &nbsp;Wyświetlaj tylko zweryfikowane posty
-                        </label>
-                    </span>
-                </div>
+                {(visible) ? (
+                    <>
+                        <div>
+                            <p className={style.searcher__content__p}>Wybierz interesujące cie katerogie</p>
+                            <div className={style.searcher__content__box__column}>
+                                <span>
+                                    <input onClick={() => setTraffic(!traffic)} type={"checkbox"} value={""} />
+                                    <label>
+                                        &nbsp;Ruch drogowy
+                                    </label>
+                                </span>
+                                <span>
+                                    <input onClick={() => setLaws(!laws)} type={"checkbox"} value={""} />
+                                    <label>
+                                        &nbsp;Prawa
+                                    </label>
+                                </span>
+                                <span>
+                                    <input onClick={() => setTaxes(!taxes)} type={"checkbox"} value={""} />
+                                    <label>
+                                        &nbsp;Podatki
+                                    </label>
+                                </span>
+                                <span>
+                                    <input onClick={() => setPenality(!penality)} type={"checkbox"} value={""} />
+                                    <label>
+                                        &nbsp;Karalność
+                                    </label>
+                                </span>
+                            </div>
+                        </div>
+                        <div>
+                            <span>
+                                <input onClick={() => setVerified(!verified)} type={"checkbox"} value={""} />
+                                <label>
+                                    &nbsp;Wyświetlaj tylko zweryfikowane posty
+                                </label>
+                            </span>
+                        </div>
+                    </>
+                ) : null}
             </div>
-            ) : null}
             <span className={style.searcher__visibleChanger}>
                 <button onClick={() => setVisible(!visible)}>{(visible) ? "Zwiń" : "Rozwiń"}</button>
             </span>
+            <div>
+                <button className={style.searcher__content__button} onClick={search}>Szukaj</button>
+            </div>
         </div>
     )
 }
