@@ -2,21 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4afc540a-9578-464c-b2c6-b2d4d012869a" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/styles/Leading.module.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/styles/components/Footer.module.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/styles/components/Post.module.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/Article.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/Article.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/Article.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/Post.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/components/Header.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/Header.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/components/Searcher.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/Searcher.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/next.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/next.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/articles/[slug].js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/articles/[slug].js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pages/articles/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/articles/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/styles/Article.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/styles/Article.module.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/styles/Articles.module.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/styles/Header.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/styles/components/Header.module.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/styles/Home.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/styles/Home.module.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/styles/Searcher.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/styles/components/Searcher.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles/components/Header.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/styles/components/Header.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles/components/Post.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/styles/components/Post.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles/components/Searcher.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/styles/components/Searcher.module.scss" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -86,7 +82,8 @@
       <workItem from="1665692443166" duration="42590000" />
       <workItem from="1665818240492" duration="1281000" />
       <workItem from="1665826165208" duration="2680000" />
-      <workItem from="1665855853215" duration="273000" />
+      <workItem from="1665855853215" duration="6695000" />
+      <workItem from="1665895734149" duration="315000" />
     </task>
     <servers />
   </component>

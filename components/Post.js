@@ -3,12 +3,10 @@ import Link from "next/link";
 
 import {AiFillStar} from 'react-icons/ai'
 
-export default function Article({attributes : {title, content, slug, category, verified, createdAt}}) {
+export default function Post({attributes : {title, content, slug, category, verified, createdAt}}) {
     let finalContent = content.substring(0, 200)
     finalContent = finalContent.substring(0, Math.min(finalContent.length, finalContent.lastIndexOf(" ")))
 
-
-    console.log(verified)
     return (
         <div className={style.article}>
             <div className={style.article__border}>

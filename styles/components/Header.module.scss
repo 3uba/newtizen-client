@@ -5,10 +5,21 @@
   height: auto;
   background: $color5;
   padding: 1.4rem 15%;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
   z-index: 10;
   &__label {
     font-size: 1.6rem;
     color: #fff;
+    cursor: pointer;
+  }
+  &__button {
+    padding: .6rem 2rem;
+    border-radius: 8px;
+    background: #457B9D;
+    color: white;
+    border: 0;
     cursor: pointer;
   }
 }

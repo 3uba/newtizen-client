@@ -2,7 +2,7 @@ import {contentURL} from "../../config/axios";
 import axios from "axios"
 import Link from "next/link";
 import Searcher from "../../components/Searcher";
-import Article from "../../components/Article";
+import Post from "../../components/Post";
 import style from "../../styles/Home.module.scss";
 
 export default function Home({blogPosts}) {
@@ -14,7 +14,7 @@ export default function Home({blogPosts}) {
             <div className={style.articles__container}>
                 {(blogPosts.data.length > 0) ? blogPosts.data.map(({attributes}, key) => {
                     return (
-                        <Article key={key} attributes={attributes}/>
+                        <Post key={key} attributes={attributes}/>
                     )
                 }) : (
                     <div>

@@ -9,6 +9,11 @@ export default function Header() {
                     newtizen
                 </span>
             </Link>
+            <Link passHref href={"/creator"}>
+                <span className={style.header__button}>
+                    Stwórz artykół!
+                </span>
+            </Link>
         </div>
     )
 }

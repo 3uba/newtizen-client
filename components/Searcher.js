@@ -12,6 +12,7 @@ export default function Searcher() {
     const [firstCountry, setFirstCountry] = useState('')
     const [secondCountry, setSecondCountry] = useState('')
     const [motherCountry, setMotherCountry] = useState('')
+    const [visible, setVisible] = useState(false)
 
     useEffect( () => {
         async function fetchData() {
@@ -23,6 +24,8 @@ export default function Searcher() {
 
     return (
         <div className={style.searcher}>
+            <p className={style.searcher__title}>Filtry</p>
+            {(visible) ? (
             <div className={style.searcher__content}>
                 <div className={style.searcher__content__box__row}>
                     <div className={style.searcher__content__radios}>
@@ -115,6 +118,10 @@ export default function Searcher() {
                     </span>
                 </div>
             </div>
+            ) : null}
+            <span className={style.searcher__visibleChanger}>
+                <button onClick={() => setVisible(!visible)}>{(visible) ? "Zwiń" : "Rozwiń"}</button>
+            </span>
         </div>
     )
 }

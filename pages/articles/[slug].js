@@ -1,16 +1,26 @@
 import axios from "axios";
 import {contentURL} from "../../config/axios";
+import style from "../../styles/Article.module.scss"
 
 export default function Home({postContent: {data}}) {
+    const {attributes: {title, content, author, createdAt, motherCountry, fromCountry, toCountry}} = data[0]
     return (
-        <h1 className="text-3xl font-bold ">
-            {data.map(({attributes: {title, content}}) => (
-                <>
-                    <p>{title}</p>
-                    <p>{content}</p>
-                </>
-            ))}
-        </h1>
+        <div className={style.article}>
+            <div className={style.article__box}>
+                <p className={style.article__box__country}>
+                    {(motherCountry) ? `Kraj: ${motherCountry}`
+                        : ((fromCountry && toCountry) ? `${fromCountry} -> ${toCountry}`
+                                : ""
+                        )}
+                </p>
+                <span>
+                    <p>Autor: {author}</p>
+                    <p>{createdAt.slice(0, 10).replaceAll("-", ".")}</p>
+                </span>
+                <h1>{title}</h1>
+                <p>{content}</p>
+            </div>
+        </div>
     )
 }
 
