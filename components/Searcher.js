@@ -110,7 +110,7 @@ export default function Searcher({setFirstCountry, setMotherCountry, setSecondCo
                         </div>
                         <div>
                             <span>
-                                <input onClick={() => setVerified(!verified)} type={"checkbox"} value={""} />
+                                <input onClick={() => setVerified(!verified)} type={"checkbox"} value={""} checked={!verified}/>
                                 <label>
                                     &nbsp;Wyświetlaj tylko zweryfikowane posty
                                 </label>

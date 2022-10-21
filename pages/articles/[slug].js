@@ -1,6 +1,6 @@
 import axios from "axios";
 import {contentURL} from "../../config/axios";
-import style from "../../styles/Article.module.scss"
+import style from "../../styles/pages/Article.module.scss"
 
 export default function Home({postContent: {data}}) {
     const {attributes: {title, content, author, createdAt, motherCountry, fromCountry, toCountry}} = data[0]

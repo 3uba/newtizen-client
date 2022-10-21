@@ -3,7 +3,7 @@ import {useRouter} from "next/router";
 import Link from "next/link";
 import axios from "axios";
 import {AiOutlineCheck} from "react-icons/ai"
-import style from "../styles/Leading.module.scss";
+import style from "../styles/pages/Leading.module.scss";
 import {contentURL} from "../config/axios";
 
 export default function Home({home}) {

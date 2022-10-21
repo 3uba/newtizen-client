@@ -1,0 +1,51 @@
+.creator {
+  padding: 50px 0;
+  width: 920px;
+  margin: 0 auto;
+
+  display: flex;
+  flex-direction: column;
+
+  &__title {
+    font-size: 2rem;
+    font-weight: bold;
+    padding-bottom: 1.2rem;
+    width: 100%;
+    border-bottom: 1px #aaaaaa solid;
+  }
+
+  button {
+    padding: 1rem 0;
+    transition: .5s;
+    font-size: 1.2rem;
+    &:hover {
+      color: #fff;
+      background: #457B9D;
+    }
+  }
+
+  &__span {
+    padding: 1rem 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    label {
+      font-size: 1.8rem;
+      padding: .2rem 1.2rem 0 0;
+    }
+    input {
+      vertical-align: bottom;
+      font-size: 1.8rem;
+      padding: .2rem 0 0 .3rem;
+      color: #444444;
+    }
+    div {
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+
+}
