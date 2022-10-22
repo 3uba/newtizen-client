@@ -2,20 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4afc540a-9578-464c-b2c6-b2d4d012869a" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/pages/creator/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/styles/pages/Creator.module.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/Post.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/Post.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/components/Searcher.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/Searcher.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/articles/[slug].js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/articles/[slug].js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pages/articles/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/articles/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/creator/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/creator/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pages/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/styles/Article.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/styles/pages/Article.module.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/styles/Home.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/styles/pages/Home.module.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/styles/Leading.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/styles/pages/Leading.module.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/styles/components/Header.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/styles/components/Header.module.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles/globals.scss" beforeDir="false" afterPath="$PROJECT_DIR$/styles/globals.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles/pages/Creator.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/styles/pages/Creator.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles/pages/Leading.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/styles/pages/Leading.module.scss" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,20 +31,20 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/home/fsroot/local/newtizen/newtizen-client&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;yarn&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;configurable.group.editor&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;/home/fsroot/.local/share/JetBrains/Toolbox/apps/WebStorm/ch-0/222.4345.14/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "/home/fsroot/local/newtizen/newtizen-server",
+    "node.js.detected.package.eslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "nodejs_package_manager_path": "yarn",
+    "settings.editor.selected.configurable": "configurable.group.editor",
+    "ts.external.directory.path": "/home/fsroot/.local/share/JetBrains/Toolbox/apps/WebStorm/ch-0/222.4345.14/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/styles/pages" />
@@ -91,6 +86,8 @@
       <workItem from="1665922596560" duration="5885000" />
       <workItem from="1665995252394" duration="30000" />
       <workItem from="1666184128974" duration="504000" />
+      <workItem from="1666382285116" duration="1179000" />
+      <workItem from="1666427226725" duration="15940000" />
     </task>
     <servers />
   </component>

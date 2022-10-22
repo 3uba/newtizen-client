@@ -6,12 +6,28 @@
   display: flex;
   flex-direction: column;
 
+  &__info {
+    font-size: 1.2rem;
+    padding: 1rem;
+    margin: 0 0 1rem;
+  }
+
   &__title {
     font-size: 2rem;
     font-weight: bold;
     padding-bottom: 1.2rem;
     width: 100%;
     border-bottom: 1px #aaaaaa solid;
+  }
+
+  &__selectText {
+    font-size: 1.4rem;
+    padding: 0 1rem .5rem 0;
+  }
+
+  &__div {
+    display: flex;
+    flex-direction: column;
   }
 
   button {

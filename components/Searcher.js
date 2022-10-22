@@ -4,7 +4,7 @@ import axios from "axios";
 import {contentURL} from "../config/axios";
 
 export default function Searcher({setFirstCountry, setMotherCountry, setSecondCountry, search,
-            traffic, setTraffic, laws, setLaws, penality, setPenality, taxes, setTaxes, setVerified, verified
+            traffic, setTraffic, laws, setLaws, penalty, setPenalty, taxes, setTaxes, setVerified, verified
     }) {
     const [location, setLocation] = useState(0)
     const [countries, setCountries] = useState()
@@ -101,7 +101,7 @@ export default function Searcher({setFirstCountry, setMotherCountry, setSecondCo
                                     </label>
                                 </span>
                                 <span>
-                                    <input onClick={() => setPenality(!penality)} type={"checkbox"} value={""} />
+                                    <input onClick={() => setPenalty(!penalty)} type={"checkbox"} value={""} />
                                     <label>
                                         &nbsp;Karalność
                                     </label>
@@ -110,7 +110,7 @@ export default function Searcher({setFirstCountry, setMotherCountry, setSecondCo
                         </div>
                         <div>
                             <span>
-                                <input onClick={() => setVerified(!verified)} type={"checkbox"} value={""} checked={!verified}/>
+                                <input onClick={() => setVerified(!verified)} type={"checkbox"} value={""} checked={verified}/>
                                 <label>
                                     &nbsp;Wyświetlaj tylko zweryfikowane posty
                                 </label>

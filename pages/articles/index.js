@@ -14,13 +14,11 @@ export default function Home({blogPosts, filters}) {
     const [firstCountry, setFirstCountry] = useState('')
     const [secondCountry, setSecondCountry] = useState('')
     const [motherCountry, setMotherCountry] = useState('')
-    const [verified, setVerified] = useState(filtersVerified)
-    console.log(verified)
-
+    const [verified, setVerified] = useState(filtersVerified ?? true)
     const [traffic, setTraffic] = useState(false)
     const [laws, setLaws] = useState(false)
     const [taxes, setTaxes] = useState(false)
-    const [penality, setPenality] = useState(false)
+    const [penalty, setPenalty] = useState(false)
     const [posts, setPosts] = useState(blogPosts)
 
     function Search() {
@@ -47,16 +45,15 @@ export default function Home({blogPosts, filters}) {
         if (traffic) category.push("traffic")
         if (laws) category.push("laws")
         if (taxes) category.push("taxes")
-        if (penality) category.push("penality")
+        if (penalty) category.push("penalty")
 
-        if (verified) params = {...params, verified: true}
+        if (verified) params = {...params, verified: 'true'}
         params = {...params, cat: category}
 
         router.push({
             pathname: '/articles',
             query: params
         }, '', {shallow: false}).then(() => {
-            console.log('success')
             router.reload()
         })
     }
@@ -73,11 +70,11 @@ export default function Home({blogPosts, filters}) {
                     traffic={traffic}
                     laws={laws}
                     taxes={taxes}
-                    penality={penality}
+                    penalty={penalty}
                     setTraffic={setTraffic}
                     setLaws={setLaws}
                     setTaxes={setTaxes}
-                    setPenality={setPenality}
+                    setPenalty={setPenalty}
                     search={Search}
                 />
             </div>
@@ -97,7 +94,7 @@ export default function Home({blogPosts, filters}) {
 }
 
 Home.getInitialProps = async ({ query }) => {
-    const {from, to, local, verified = "true", cat} = query
+    const {from, to, local, verified, cat} = query
 
     let url = `${contentURL}/api/posts?`;
 
@@ -106,7 +103,7 @@ Home.getInitialProps = async ({ query }) => {
     if (from) params.push(`filters[fromCountry][$eq]=${from}`)
     if (to) params.push(`filters[toCountry][$eq]=${to}`)
     if (local) params.push(`filters[motherCountry][$eq]=${local}`)
-    if (verified) params.push(`filters[verified][$eq]=${verified}`)
+    if (verified) params.push(`filters[verified][$eq]=true`)
 
     if(typeof cat === "object")
         cat.map(item => {

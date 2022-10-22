@@ -30,8 +30,8 @@ export default function Home({home}) {
                     }
                 router.push({
                     pathname: `/articles`,
-                    query: query
-                }).then(r => (console.log(r)))
+                    query: {...query, verified: true }
+                }).then(r => {})
             } else {
                 input1.current.style.color = "red"
                 input2.current.style.color = "red"
@@ -42,9 +42,10 @@ export default function Home({home}) {
                 router.push({
                     pathname: `/articles`,
                     query: {
-                        local: personCountry
+                        local: personCountry,
+                        verified: true
                     }
-                }).then(r => (console.log(r)))
+                }).then(r => {})
             } else {
                 input3.current.style.color = "red"
             }

@@ -57,15 +57,16 @@
         min-width: 10rem;
       }
     }
-    &__btn {
+    button {
       margin: 3rem 0 1rem;
       padding: .6rem;
       width: 12rem;
       text-align: center;
       transition: .5s;
       font-size: 1.2rem;
+      cursor: pointer;
       &:hover {
-        color: white;
+        color: #fff !important;
         background: #457B9D;
       }
     }

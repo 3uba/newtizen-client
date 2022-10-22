@@ -4,8 +4,8 @@ import Link from "next/link";
 import {MdVerified} from 'react-icons/md'
 
 export default function Post({attributes : {title, content, slug, category, verified, createdAt}}) {
-    let finalContent = content.substring(0, 200)
-    finalContent = finalContent.substring(0, Math.min(finalContent.length, finalContent.lastIndexOf(" ")))
+    let finalContent = (content) ? content.substring(0, 200) : ""
+    finalContent = (finalContent) ? finalContent.substring(0, Math.min(finalContent.length, finalContent.lastIndexOf(" "))) : ""
 
     return (
         <div className={style.article}>
@@ -13,7 +13,7 @@ export default function Post({attributes : {title, content, slug, category, veri
                 <div className={style.article__category}>
                     <span className={style.article__category__text}>{category}</span>
                     {(verified) ? (
-                            <MdVerified style={{ color: "white" }} color="white" />
+                            <MdVerified style={{ color: "#457B9D" }} color="#457B9D" />
                         ) : ""}
                 </div>
                 <div className={style.article__content}>
