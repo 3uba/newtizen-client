@@ -126,12 +126,13 @@ export default function Home({home}) {
               <h1>Czym jest newtizen?</h1>
 
               <p>
-                  Newtizen, portal dla wszystkich obywateli, którzy chcą
-                  być rzetelnie doinformowani na temat praw jakie nami rządzą.<br />
+                  NNewtizen, portal dla wszystkich obywateli, którzy chcą
+                  być rzetelnie doinformowani na temat praw, jakie nami rządzą.<br />
                   Newtizen ma za zadanie w prosty sposób wskazać prawa w kraju,
-                  jak również różnice praw w różnych krajach tak abyśmy <br/>
-                  mieli pojęcie co możemy, czego nie możemy robić i co
+                  jak również różnice praw w różnych krajach tak, abyśmy <br/>
+                  mieli pojęcie, co możemy, czego nie możemy robić i co
                   robić/jak sobie radzić jak już się stało.
+
               </p>
 
               <h1>Geneza powstania</h1>
@@ -175,7 +176,7 @@ export default function Home({home}) {
 
               <ol>
                   <li>
-                    <s>nie losowy atrykuł</s>
+                    <s>nielosowy atrykuł</s>
                   </li>
                   <li>
                       <s>nie historia kolegii</s>
