@@ -198,7 +198,7 @@ export default function Home({home}) {
 
 
 export const getStaticProps = async () => {
-    const {data: {data: {attributes}}} = await axios.get(`https://newtizen-server.herokuapp.com/api/home`)
+    const {data: {data: {attributes}}} = await axios.get(`${contentURL}/api/home`)
 
     return {
         props: {

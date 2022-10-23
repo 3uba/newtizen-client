@@ -2,7 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4afc540a-9578-464c-b2c6-b2d4d012869a" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/Searcher.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/Searcher.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/axios.js" beforeDir="false" afterPath="$PROJECT_DIR$/config/axios.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/articles/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/articles/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/creator/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/creator/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pages/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />

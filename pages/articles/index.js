@@ -98,7 +98,7 @@ export default function Home({blogPosts, filters}) {
 Home.getInitialProps = async ({ query }) => {
     const {from, to, local, verified, cat} = query
 
-    let url = `https://newtizen-server.herokuapp.com/api/posts?`;
+    let url = `${contentURL}/api/posts?`;
 
     let params = [];
 
