@@ -31,4 +31,17 @@
 
     }
   }
+  &__recommendations {
+    width: 420px;
+    background: #fff;
+    padding: 1rem 0 0;
+    display: flex;
+    flex-direction: column;
+    &__title {
+      font-size: 2rem;
+      margin: 1rem 0 2rem;
+      text-align: center;
+
+    }
+  }
 }

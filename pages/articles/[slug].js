@@ -1,9 +1,10 @@
 import axios from "axios";
 import {contentURL} from "../../config/axios";
 import style from "../../styles/pages/Article.module.scss"
+import Post from "../../components/Post";
 
 export default function Home({postContent: {data}}) {
-    const {attributes: {title, content, author, createdAt, motherCountry, fromCountry, toCountry}} = data[0]
+    const {attributes: {title, content, author, createdAt, motherCountry, fromCountry, toCountry, posts}} = data[0]
     return (
         <div className={style.article}>
             <div className={style.article__box}>
@@ -19,6 +20,23 @@ export default function Home({postContent: {data}}) {
                 </span>
                 <h1>{title}</h1>
                 <p>{content}</p>
+            </div>
+
+            <div className={style.article__recommendations}>
+                <span className={style.article__recommendations__title}>
+                    Rekomendowane posty
+                </span>
+                <div>
+                    {(posts.data.length > 0) ? posts.data.map(({attributes}, key) => {
+                        return (
+                            <Post key={key} attributes={attributes}/>
+                        )
+                    }) : (
+                        <div>
+                            Brak rekomendowanych postów
+                        </div>
+                    )}
+                </div>
             </div>
         </div>
     )
@@ -41,7 +59,7 @@ export async function getStaticPaths() {
 
 export async function getStaticProps(context) {
     const {slug} = context.params
-    const {data} = await axios.get(`${contentURL}/api/posts?filters[slug][$eq]=${slug}&populate=deep`);
+    const {data} = await axios.get(`${contentURL}/api/posts?filters[slug][$eq]=${slug}&populate=*`);
 
     return {
         props: { postContent: data },
