@@ -121,7 +121,7 @@ export default function Creator(props) {
                 'motherCountry': country3.current ? country3.current.value : ""
             }
 
-            const res = await axios.post(`${contentURL}/api/posts`, {
+            const res = await axios.post(`https://newtizen-server.herokuapp.com/api/posts`, {
                 headers: {
                     "Content-Type": "application/json"
                 },
