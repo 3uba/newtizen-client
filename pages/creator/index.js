@@ -242,8 +242,17 @@ export default function Creator(props) {
                                     <option disabled={true} selected={true} hidden>
                                         Wybierz kategorie
                                     </option>
-                                    <option value={"trafic"}>
+                                    <option value={"ruch_drogowy"}>
                                         Ruch drogowy
+                                    </option>
+                                    <option value={"prawo"}>
+                                        Prawo
+                                    </option>
+                                    <option value={"podatki"}>
+                                        Podatki
+                                    </option>
+                                    <option value={"karalnosc"}>
+                                        Karalość
                                     </option>
                                 </select>
                             </span>

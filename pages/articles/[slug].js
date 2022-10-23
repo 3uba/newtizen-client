@@ -2,6 +2,7 @@ import axios from "axios";
 import {contentURL} from "../../config/axios";
 import style from "../../styles/pages/Article.module.scss"
 import Post from "../../components/Post";
+import {capitalizeFirstLetter} from "../../utils";
 
 export default function Home({postContent: {data}}) {
     const {attributes: {title, content, author, createdAt, motherCountry, fromCountry, toCountry, posts}} = data[0]

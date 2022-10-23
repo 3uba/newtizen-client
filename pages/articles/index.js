@@ -44,10 +44,10 @@ export default function Home({blogPosts, filters}) {
 
         let category = []
 
-        if (traffic) category.push("traffic")
-        if (laws) category.push("laws")
-        if (taxes) category.push("taxes")
-        if (penalty) category.push("penalty")
+        if (traffic) category.push("ruch_drogowy")
+        if (laws) category.push("prawo")
+        if (taxes) category.push("podatki")
+        if (penalty) category.push("karalnosc")
 
         if (verified) params = {...params, verified: 'true'}
         params = {...params, cat: category}
@@ -119,11 +119,7 @@ Home.getInitialProps = async ({ query }) => {
         url += item + "&"
     })
 
-
-    if (query === {})
-        url += '?populate=*&locale=all'
-
-    let {data} = await axios.get(url)
+    const {data} = await (query) ? await axios.get(url) : await axios.get(`${contentURL}/api/posts?populate=*&locale=all`)
     return {
         blogPosts: data,
         filters: {from: from, to: to,local: local, verified: verified},

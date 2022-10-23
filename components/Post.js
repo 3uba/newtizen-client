@@ -1,6 +1,6 @@
 import style from "../styles/components/Post.module.scss"
 import Link from "next/link";
-
+import {capitalizeFirstLetter} from "../utils";
 import {MdVerified} from 'react-icons/md'
 
 export default function Post({attributes : {title, content, slug, category, verified, createdAt}}) {
@@ -11,7 +11,7 @@ export default function Post({attributes : {title, content, slug, category, veri
         <div className={style.article}>
             <div className={style.article__border}>
                 <div className={style.article__category}>
-                    <span className={style.article__category__text}>{category}</span>
+                    <span className={style.article__category__text}>{capitalizeFirstLetter(category.replace("_", " "))}</span>
                     {(verified) ? (
                             <MdVerified style={{ color: "#457B9D" }} color="#457B9D" />
                         ) : ""}
