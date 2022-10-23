@@ -12,6 +12,52 @@
     margin: 0 0 1rem;
   }
 
+  &__warnBtn {
+    &:hover {
+      background: #E63946!important;
+    }
+  }
+
+  &__codeInfo {
+    padding: 1rem 1rem;
+    margin: 0 0 1rem;
+    color: black;
+    background: rgba(255, 255, 0, 0.29);
+  }
+
+  &__modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+    backdrop-filter: blur(10px);
+    div {
+      width: auto;
+      height: auto;
+      display: flex;
+      flex-direction: column;
+      span {
+        display: flex;
+        flex-direction: column;
+        label {
+          font-size: 1.4rem;
+          padding: 0 0 1.2rem;
+        }
+        input {
+          text-align: center;
+          font-size: 1.4rem;
+          padding: .4rem 0;
+          margin: 0 0 1rem;
+        }
+      }
+    }
+  }
+
   &__title {
     font-size: 2rem;
     font-weight: bold;

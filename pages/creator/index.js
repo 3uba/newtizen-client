@@ -5,6 +5,7 @@ import dynamic from "next/dynamic";
 import axios from "axios";
 import {contentURL} from "../../config/axios";
 import searcherStyles from "../../styles/components/Searcher.module.scss"
+import {Router, useRouter} from "next/router";
 
 const modules = {
     toolbar: [
@@ -63,6 +64,13 @@ export default function Creator(props) {
     const nameRef = createRef();
     const categoryRef = createRef();
     const titleRef = createRef();
+    const router = useRouter();
+
+    function resetForm() {
+        if(confirm("Jesteś pewny, ta akcja spowoduje wyczyszczenie całego formularza")) {
+            router.reload()
+        }
+    }
 
     async function createArticle () {
         let send = true
@@ -79,18 +87,22 @@ export default function Creator(props) {
 
             if(!location) throw "Wybierz kraj lub kraje"
 
-            if(location === 1 && country1.current.value === "---" && country2.current.value === "---") {
-                [country1, country2].forEach(item => item.current.style.border = "1px solid red")
-                send = false
-            } else {
-                [country1, country2].forEach(item => item.current.style.border = "0")
+            if(location === 1) {
+                if(country1.current.value === "---" && country2.current.value === "---") {
+                    [country1, country2].forEach(item => item.current.style.border = "1px solid red")
+                    send = false
+                } else {
+                    [country1, country2].forEach(item => item.current.style.border = "0")
+                }
             }
 
-            if(location === 2 && country3.current.value === "---") {
-                country3.current.style.border = "1px solid red";
-                send = false
-            } else {
-                country3.current.style.border = "0";
+            if(location === 2) {
+                if(country3.current.value === "---") {
+                    country3.current.style.border = "1px solid red";
+                    send = false
+                } else {
+                    country3.current.style.border = "0";
+                }
             }
 
             if(article.length < 50 || article.length > 1000) throw "Artykuł powinien posiadać od 50 do 400 znaków"
@@ -134,16 +146,22 @@ export default function Creator(props) {
             {modal ?
                 (
                     <div className={style.creator__modal}>
-                        <span>
-                            Podaj kod weryfikacyjny:
-                            <input type={"number"} onChange={e => setCode(e.currentTarget.value)} value={code} placeholder={'1234'}/>
-                        </span>
-                        <button onClick={createArticle}>Zweryfikuj maila</button>
+                        <div>
+                            <span>
+                                <label>Sprawdź skrzynkę mailową, został wysłany kod weryfikacyjny</label>
+                                <input type={"number"} onChange={e => setCode(e.currentTarget.value)} value={code} placeholder={'Podaj kod'}/>
+                            </span>
+                            <button onClick={createArticle}>Zweryfikuj maila</button>
+                            <button className={style.creator__warnBtn} onClick={resetForm}>Anuluj</button>
+                        </div>
                     </div>
                 ) : ""
             }
             {(!sended) ? (
                 <>
+                    <span className={style.creator__codeInfo}>
+                        Na czas konkursu, funkcja wysyłania maili jest wyłączona, kod weryfikacyjny to `1234`
+                    </span>
                     <span className={style.creator__title}>
                         Kreator artykółów
                     </span>
@@ -233,6 +251,7 @@ export default function Creator(props) {
                     </span>
                     <ReactQuill theme={"snow"} modules={modules} formats={formats} value={article} onChange={setArticle}  />
                     <button onClick={createArticle}>Stwórz artykuł</button>
+                    <button className={style.creator__warnBtn} onClick={resetForm}>Anuluj</button>
                 </>
             ) : ""}
         </div>
