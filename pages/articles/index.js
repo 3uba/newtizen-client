@@ -6,6 +6,8 @@ import Post from "../../components/Post";
 import style from "../../styles/pages/Home.module.scss";
 import {useEffect, useState} from "react";
 import {useRouter} from "next/router";
+import fetch from "isomorphic-fetch";
+
 
 export default function Home({blogPosts, filters}) {
     const router = useRouter()
@@ -96,7 +98,7 @@ export default function Home({blogPosts, filters}) {
 Home.getInitialProps = async ({ query }) => {
     const {from, to, local, verified, cat} = query
 
-    let url = `${contentURL}/api/posts?`;
+    let url = `https://newtizen-server.herokuapp.com/api/posts?`;
 
     let params = [];
 
@@ -117,8 +119,11 @@ Home.getInitialProps = async ({ query }) => {
         url += item + "&"
     })
 
-    const {data} = await (query) ? await axios.get(url) : await axios.get(`${contentURL}/api/posts?populate=*&locale=all`)
 
+    if (query === {})
+        url += '?populate=*&locale=all'
+
+    let {data} = await axios.get(url)
     return {
         blogPosts: data,
         filters: {from: from, to: to,local: local, verified: verified},

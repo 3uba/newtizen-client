@@ -15,7 +15,7 @@ export default function Searcher({setFirstCountry, setMotherCountry, setSecondCo
 
     useEffect( () => {
         async function fetchData() {
-            const {data: {data: {attributes: {countries}}}} = await axios.get(`${contentURL}/api/home`)
+            const {data: {data: {attributes: {countries}}}} = await axios.get(`https://newtizen-server.herokuapp.com/api/home`)
             setCountries(countries)
         }
         fetchData()
