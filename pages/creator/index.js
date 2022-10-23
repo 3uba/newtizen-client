@@ -249,7 +249,7 @@ export default function Creator(props) {
                             </span>
                         </div>
                     </span>
-                    <ReactQuill theme={"snow"} modules={modules} formats={formats} value={article} onChange={setArticle}  />
+                    <ReactQuill className={style.creator__textField} theme={"snow"} modules={modules} formats={formats} value={article} onChange={setArticle}  />
                     <button onClick={createArticle}>Stwórz artykuł</button>
                     <button className={style.creator__warnBtn} onClick={resetForm}>Anuluj</button>
                 </>

@@ -20,7 +20,7 @@ export default function Post({attributes : {title, content, slug, category, veri
                     <h1 className={style.article__title}>{title}</h1>
                     <p className={style.article__shortContent}>{finalContent}...</p>
                     <Link passHref href={`/articles/${slug}`}>
-                        <a className={style.article__readmore}>Read more</a>
+                        <a className={style.article__readmore}>Czytaj dalej</a>
                     </Link>
                 </div>
             </div>

@@ -110,4 +110,43 @@
     }
   }
 
+  @media screen and (max-width: 1020px) {
+    width: 100%;
+    padding: 0;
+    div, input {
+      margin: 0 .4rem;
+    }
+    &__span {
+      flex-direction: column;
+      align-items: normal;
+      justify-content: left;
+      padding: .2rem 0 1rem;
+      label {
+        font-size: 1.2rem;
+        padding: .6rem;
+      }
+      div {
+      width: 95%;
+      span {
+        select {
+          padding-right: .6rem;
+        }
+      }
+      }
+      input {
+        font-size: 1.2rem;
+      }
+    }
+    &__selectText {
+      font-size: 1.2rem;
+    }
+    &__title {
+      text-align: center;
+    }
+    &__textField {
+      padding: .2rem 0 1rem;
+    }
+  }
+
 }
+

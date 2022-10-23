@@ -67,4 +67,17 @@
     }
 
   }
+
+  @media screen and (max-width: 1020px) {
+    &__content {
+      &__box {
+        &__column {
+          flex-direction: column;
+          span {
+            padding: .2rem 0;
+          }
+        }
+      }
+    }
+  }
 }

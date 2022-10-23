@@ -17,4 +17,15 @@
     flex-direction: row;
     background: #fdfdfd;
   }
+
+  @media screen and (max-width: 1020px) {
+    &__searcher {
+      width: 100vw;
+      padding: 0 1rem;
+    }
+    &__container {
+      width: 100vw;
+      padding: 0 1rem;
+    }
+  }
 }

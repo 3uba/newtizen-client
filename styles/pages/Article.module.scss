@@ -44,4 +44,17 @@
 
     }
   }
+  @media screen and (max-width: 1020px) {
+    flex-direction: column;
+    padding: 0;
+    &__box {
+      width: 100%;
+      padding: 1rem 1.4rem;
+    }
+    &__recommendations {
+      max-width: 100%;
+      border-top: 1px solid #efefef;
+      padding: 0 .4rem;
+    }
+  }
 }

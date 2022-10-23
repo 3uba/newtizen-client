@@ -95,8 +95,15 @@
 
   @media screen and (max-width: 820px) {
     &__welcome {
+      padding: 1.4rem;
       &__span {
-        font-size: 2rem;
+        font-size: 1.8rem;
+        line-height: 2.4rem;
+      }
+      &__table {
+        span {
+          font-size: 1rem;
+        }
       }
     }
     &__searcher {
@@ -110,6 +117,32 @@
         &__btn {
         margin-top: 3rem;
       }
+
+      &__prgf {
+        padding: 0 0 .8rem;
+      }
+
+      &__quest {
+        padding: .8rem 0;
+      }
+
+      &__btn {
+        padding-top: 1rem;
+      }
+
+      &__label {
+        padding: 0;
+        margin: 0;
+      }
+      &__box {
+        flex-direction: column;
+        justify-content: left;
+        align-items: normal;
+      }
+
+    }
+    &__desc {
+      padding: 0 1.4rem;
     }
   }
 }
